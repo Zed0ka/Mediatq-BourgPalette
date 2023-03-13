@@ -23,3 +23,10 @@ NOTE : CHAQUE POINT DOIT SE CONCLURE PAR UNE ENTREVUE CLIENT (a minima : retour 
 2. Wireframe du site
 3. Choix design visuel
 4. (MCD MLD +) création BDD
+
+##### **Informations sur le diagramme Use Case :**
+J'ai créé l'objet "réservation" en imaginant que cliquer sur un bouton près d'un livre disponible produise une page/popup.  
+Cette page contient un formulaire qui demandera l'adresse mail et le numéro de téléphone de l'utilisateur.  
+Cette page/popup affichera aussi la nécessité de la personne de se présenter à la mdtq pour récupérer son exemplaire.  
+Une fois les infos renseignées, le nombre d'exemplaires du livre est réduit de un.  
+Si le nombre d'exemplaires du livre passe à zéro, l'état du livre passe de "disponible" à "indisponible".  
