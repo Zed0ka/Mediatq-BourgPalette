@@ -23,14 +23,15 @@ NOTE : CHAQUE POINT DOIT SE CONCLURE PAR UNE ENTREVUE CLIENT (a minima : retour 
 1. Diagramme cas d'utilisation
 2. Wireframe du site
 3. Choix design visuel
-4. Prototypage du 1. des fonctionnalités principales
-5. Prototypage du 2. des fonctionnalités principales
-6. Prototypage du 3. des fonctionnalités principales
-7. Prototypage du 4. des fonctionnalités principales
-8. Lien entre les prototypes
-9. Production MCD MLD
-10. Création de la BDD (ajout des entrées, lien API?)
-11. Lien prototypes - BDD.
+4. Choix de la stack
+5. Prototypage du 1. des fonctionnalités principales
+6. Prototypage du 2. des fonctionnalités principales
+7. Prototypage du 3. des fonctionnalités principales
+8. Prototypage du 4. des fonctionnalités principales
+9. Lien entre les prototypes
+10. Production MCD MLD
+11. Création de la BDD (ajout des entrées, lien API?)
+12. Lien prototypes - BDD.
 
 ##### **Informations sur le diagramme Use Case :**
 J'ai créé l'objet "réservation" en imaginant que cliquer sur un bouton près d'un livre disponible produise une page/popup.  
@@ -39,6 +40,13 @@ Cette page/popup affichera aussi la nécessité de la personne de se présenter 
 Une fois les infos renseignées, le nombre d'exemplaires du livre est réduit de un.  
 Si le nombre d'exemplaires du livre passe à zéro, l'état du livre passe de "disponible" à "indisponible".  
 
+##### **Aide :**
+Créer table de réservation  
+Lier id du livre + infos user (toujours pas de compte!)  
+Stack : php: Fetch + fichier JSON (a créer avant lien API - ATTENTION ID)  
+
 _Notes :_  
 _etv = entrevue_
+_Fmt = Formateur_
+_Clt = Client_
 _BDDr = Base De Données relationnelle_
