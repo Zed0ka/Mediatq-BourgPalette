@@ -45,6 +45,8 @@ Créer table de réservation
 Lier id du livre + infos user (toujours pas de compte!)  
 Stack : php: Fetch + fichier JSON (a créer avant lien API - ATTENTION ID)  
 
+Obj journée : envoyer du json en php plutôt que du html
+
 _Notes :_  
 _etv = entrevue_
 _Fmt = Formateur_
