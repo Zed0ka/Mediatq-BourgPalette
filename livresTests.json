@@ -1,26 +1,30 @@
 [
     {
-        "Titre": "ALivre 1",
-        "langue":"francais",
-        "Auteur": "Auteur1",
-        "Id":"0"
+        "titre": "ALivre 1",
+        "langue":"Francais",
+        "auteur": "Auteur1",
+        "genre": "Fantasy",
+        "id":"0"
     },
     {
-        "Titre": "BLivre 2",
-        "langue":"francais",
-        "Auteur": "Auteur2",
-        "Id":"1"
+        "titre": "BLivre 2",
+        "langue":"Francais",
+        "auteur": "Auteur2",
+        "genre": "Fantasy",
+        "id":"1"
     },
     {
-        "Titre": "ALivre 3",
-        "langue":"francais",
-        "Auteur": "Auteur1",
-        "Id":"2"
+        "titre": "ALivre 3",
+        "langue":"Francais",
+        "auteur": "Auteur1",
+        "genre": "Science-Fiction",
+        "id":"2"
     },
     {
-        "Titre": "CLivre 4",
-        "langue":"anglais",
-        "Auteur": "Auteur4",
-        "Id":"3"
+        "titre": "CLivre 4",
+        "langue":"Anglais",
+        "auteur": "Auteur4",
+        "genre": "Science-Fiction",
+        "id":"3"
     }
 ]

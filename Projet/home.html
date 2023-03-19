@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Page d'accueil</title>
+</head>
+<body>
+    <h1>
+        Mediathèque du Bourg Palette
+    </h1>
+    <h2>
+        Infos
+    </h2>
+    <div>
+        <div>
+            <h3>
+                Contact
+            </h3>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, voluptates eveniet facere alias corporis consequuntur porro quasi eaque. Minus molestias, necessitatibus fugit tenetur commodi aperiam ex architecto assumenda et reiciendis.
+                Provident qui rerum aliquam minus distinctio natus eius, voluptates illum est sunt dicta ipsa, doloremque nostrum eaque iure consequuntur quidem ea reiciendis veniam excepturi officia, velit animi! Fugiat, voluptate dignissimos?
+            </p>
+        </div>
+        <div>
+            <h3>
+                Truc
+            </h3>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, voluptates eveniet facere alias corporis consequuntur porro quasi eaque. Minus molestias, necessitatibus fugit tenetur commodi aperiam ex architecto assumenda et reiciendis.
+                Provident qui rerum aliquam minus distinctio natus eius, voluptates illum est sunt dicta ipsa, doloremque nostrum eaque iure consequuntur quidem ea reiciendis veniam excepturi officia, velit animi! Fugiat, voluptate dignissimos?
+            </p>
+        </div>
+        <div>
+            <h3>
+                Machin
+            </h3>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, voluptates eveniet facere alias corporis consequuntur porro quasi eaque. Minus molestias, necessitatibus fugit tenetur commodi aperiam ex architecto assumenda et reiciendis.
+                Provident qui rerum aliquam minus distinctio natus eius, voluptates illum est sunt dicta ipsa, doloremque nostrum eaque iure consequuntur quidem ea reiciendis veniam excepturi officia, velit animi! Fugiat, voluptate dignissimos?
+            </p>
+        </div>
+    </div>
+    <h2>
+        Les derniers ajouts
+    </h2>
+    <div class="lastAddedBooks">
+    </div>
+    <aside class="searchInfos">
+        <div class="searchBar">
+            <form action="searchBook.js" method="get">
+                <input type="text" name="search_input" id="search_input">
+                <button type="submit" class="search_btn" id="search_btn">
+                    Go!
+                </button>
+            </form>
+        </div>
+        <nav id="searchNav">
+            Je veux trouver...
+            <ol>
+                <li><button>
+                    Par langues
+                </button></li>
+                <li><button>
+                    Par genre
+                </button></li>
+                <li><button>
+                    Par auteur
+                </button></li>
+            </ol>
+        </nav>
+    </aside>
+<script>
+    const getAllBooks = new Worker("WWgetAllBooks.js");
+    
+    const lastAddedBooks = document.querySelector(".lastAddedBooks");
+    getAllBooks.onmessage = (e)=>{
+        const allBooks = e.data;
+        allBooks.forEach(book => {
+/*             bookInfo("bookTitle","h3",book["titre"]);
+            bookInfo("bookLang","p",book["langue"]);
+            bookInfo("bookAuth","p",book["auteur"]);
+            bookInfo("bookGenre","p",book["genre"]);
+            bookInfo("reservBtn","button","Réserver"); */
+
+            //todo => DRY : optimiser en créant fct° "bookDisplay(element,class,info)" 
+            // ICI : "element"= "h3", "class" ="bookTitle", info = "titre"
+            const bookCard = document.createElement("div");
+            bookCard.classList.add("bookCard");
+            lastAddedBooks.appendChild(bookCard);
+
+            const bookTitle = document.createElement("h3");  
+            bookTitle.classList.add("bookTitle");
+            bookTitle.innerText = `${book["titre"]}`;
+            lastAddedBooks.appendChild(bookTitle);
+            
+            const bookLang = document.createElement("p");
+            bookLang.classList.add("bookLang");
+            bookLang.innerText = `${book["langue"]}`;
+            lastAddedBooks.appendChild(bookLang);
+
+            const bookAuth = document.createElement("p");
+            bookAuth.classList.add("bookAuth");
+            bookAuth.innerText = `${book["auteur"]}`;
+            lastAddedBooks.appendChild(bookAuth);
+
+            const bookGenre = document.createElement("p");
+            bookGenre.classList.add("bookGenre");
+            bookGenre.innerText = `${book["genre"]}`;
+            lastAddedBooks.appendChild(bookGenre);
+
+            const reservBtn = document.createElement("button");
+            reservBtn.classList.add("reservBtn");
+            reservBtn.innerText = `Réserver`;
+            lastAddedBooks.appendChild(reservBtn);
+        });
+    }
+
+/*     function bookInfo(bkName,bkElement,bkInfo) {
+        bkName = document.createElement(`${bkElement}`);
+        bkName.classList.add(`${bkInfo}`);
+        bkName.innerText = `${bkName}`;
+        lastAddedBooks.appendChild(bkName);
+    } */
+    
+    reservBtn.addeventlistener("click",()=>{
+        bookCard.classList.toggle("modalOpen");
+    })
+</script>
+</body>
+</html>
