@@ -5,8 +5,8 @@
 - Centré utilisateur : faciliter le suivi des réservations et aider à la prévention des retards.
 
 ### **Fonctionnalité principale :**
-1. Retirer du stock + remettre en stock => CR (UD pas obligatoires)
-2. Réservation de livre
+1. Réservation de livre
+2. Retirer du stock + remettre en stock => CR (UD pas obligatoires) 
 3. Stocker adresse mail + tel du user (pas de compte)
 4. interface utilisateur
 

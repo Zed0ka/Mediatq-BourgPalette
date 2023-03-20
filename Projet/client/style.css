@@ -1,0 +1,77 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    display: grid;
+   /*  grid-template-columns: repeat(4, 1fr); */
+    grid-template-areas: "h1 h1 h1 h1"
+    "aside h2 h2 h2"
+    "aside main main main"
+    "aside main main main"
+}
+
+aside {
+    grid-area: aside;
+    border-right: 1px solid black;
+    padding-right: 5px;
+    margin-right: 5px;
+}
+
+h1{
+    grid-area: h1;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    background-color: lightcoral;
+}
+
+h2{
+    grid-area: h2;
+}
+
+main {
+    grid-area: main;
+    height: 75vh;
+    width: 60vw;
+}
+
+.lastAddedBooks{
+    display: grid;
+    height: 50vh;
+    width: 50vw;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.bookCard{
+    
+}
+
+.bookTitle {
+
+}
+
+.reservBtn {
+
+}
+
+.bookLang {
+
+}
+
+.bookAuth {
+
+}
+
+.bookGenre {
+
+}
+
+.modalDisplay {
+
+}
+
+#searchNav>ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
