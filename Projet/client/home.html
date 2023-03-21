@@ -8,35 +8,37 @@
     <title>Page d'accueil</title>
 </head>
 <body>
-    <h1>
-        Mediathèque du Bourg Palette
-    </h1>
+<!--     <div id="h1div"> -->
+        <h1>
+            Mediathèque du Bourg Palette
+        </h1>
+<!--     </div> -->
     <h2>
         Infos
     </h2>
     <main>
-        <section>
-            <div>
+        <section id="infos">
+            <div id="news">
                 <h3>
-                    Contact
+                    Actualités de votre médiathèque
                 </h3>
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, voluptates eveniet facere alias corporis consequuntur porro quasi eaque. Minus molestias, necessitatibus fugit tenetur commodi aperiam ex architecto assumenda et reiciendis.
                     Provident qui rerum aliquam minus distinctio natus eius, voluptates illum est sunt dicta ipsa, doloremque nostrum eaque iure consequuntur quidem ea reiciendis veniam excepturi officia, velit animi! Fugiat, voluptate dignissimos?
                 </p>
             </div>
-            <div>
+            <div id="contact">
                 <h3>
-                    Truc
+                    Nous contacter
                 </h3>
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, voluptates eveniet facere alias corporis consequuntur porro quasi eaque. Minus molestias, necessitatibus fugit tenetur commodi aperiam ex architecto assumenda et reiciendis.
                     Provident qui rerum aliquam minus distinctio natus eius, voluptates illum est sunt dicta ipsa, doloremque nostrum eaque iure consequuntur quidem ea reiciendis veniam excepturi officia, velit animi! Fugiat, voluptate dignissimos?
                 </p>
             </div>
-            <div>
+            <div id="how">
                 <h3>
-                    Machin
+                    Comment çà marche
                 </h3>
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, voluptates eveniet facere alias corporis consequuntur porro quasi eaque. Minus molestias, necessitatibus fugit tenetur commodi aperiam ex architecto assumenda et reiciendis.
@@ -53,19 +55,23 @@
         </section>
     </main>
     <aside class="searchInfos">
-        <h2>
+        <h3>
             Rechercher...
-        </h2>
+        </h3>
         <div class="searchBar">
             <form action="searchBook.js" method="get">
-                <input type="text" name="search_input" id="search_input">
-                <button type="submit" class="search_btn" id="search_btn">
+                <input type="text" name="search_input" id="search_input" placeholder="Titre du livre...">
+                <br>
+                <button type="submit" name="search_btn" id="search_btn">
                     Go!
                 </button>
             </form>
         </div>
+        <br>
         <nav id="searchNav">
-            Je veux trouver...
+            <h3>
+                Afficher tout...
+            </h3>
             <ol>
                 <li><button>
                     Par langues

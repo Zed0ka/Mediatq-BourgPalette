@@ -1,11 +1,10 @@
-*{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+* {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
     display: grid;
-   /*  grid-template-columns: repeat(4, 1fr); */
-    grid-template-areas: "h1 h1 h1 h1"
+    grid-template-areas: "h1 h1 . ."
     "aside h2 h2 h2"
     "aside main main main"
     "aside main main main"
@@ -13,29 +12,59 @@ body {
 
 aside {
     grid-area: aside;
-    border-right: 1px solid black;
+    border-right: 4px solid lightcoral;
     padding-right: 5px;
     margin-right: 5px;
+    height: 75vh;
+    width: 9vw;
 }
 
-h1{
+h1 {
     grid-area: h1;
-    padding-bottom: 5px;
-    padding-top: 5px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+    margin: 0;
     background-color: lightcoral;
+    border-radius: 0% 50% 0% 40%;
+    border:2px solid coral;
 }
 
-h2{
+/* h1div {
+    background-color: grey;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+} */
+
+h2 {
     grid-area: h2;
 }
 
 main {
     grid-area: main;
-    height: 75vh;
-    width: 60vw;
 }
 
-.lastAddedBooks{
+#infos {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1vw;
+}
+
+#news{
+    border-right: 2px solid lightcoral;
+}
+
+#contact {
+    border-right: 2px solid lightcoral;
+}
+
+#how {
+}
+
+.lastAddedBooks {
     display: grid;
     height: 50vh;
     width: 50vw;
@@ -66,12 +95,51 @@ main {
 
 }
 
-.modalDisplay {
+.modalNone {
+    display:none;
+}
 
+.modalDisplay {
+    display: block;
+    z-index: 1;
 }
 
 #searchNav>ol {
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+
+#searchNav>ol>li>button {
+    margin-bottom: 1vh;
+    width: 117px;
+    padding: 0.5vw;
+    background-color: lightcoral;
+    border:2px solid coral;
+    border-radius: 0% 50% 0% 40%;
+    font-weight:600;
+}
+
+#searchNav>ol>li>button:hover {
+    border:2px solid red;
+}
+
+#search_input {
+    width: 7.5vw;
+}
+
+#search_btn {
+    width:9vw;
+    margin-top: 0.5vh;
+    margin-bottom: 1vh;
+    width: 117px;
+    padding: 0.3vw;
+    background-color: lightcoral;
+    border:2px solid coral;
+    border-radius: 0% 50% 0% 40%;
+    font-weight:600;
+}
+
+#search_btn:hover {
+    border:2px solid red;
 }
