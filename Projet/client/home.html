@@ -14,13 +14,13 @@
         </h1>
 <!--     </div> -->
     <h2>
-        Infos
+        Informations de votre médiathèque
     </h2>
     <main>
         <section id="infos">
             <div id="news">
                 <h3>
-                    Actualités de votre médiathèque
+                    Actualités
                 </h3>
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, voluptates eveniet facere alias corporis consequuntur porro quasi eaque. Minus molestias, necessitatibus fugit tenetur commodi aperiam ex architecto assumenda et reiciendis.
@@ -48,8 +48,10 @@
         </section>
         <section>
             <h2>
-                Les derniers ajouts
+                Notre bibliothèque
             </h2>
+            <div class="oneBookDisplay">
+            </div>
             <div class="lastAddedBooks">
             </div>
         </section>
@@ -85,6 +87,8 @@
             </ol>
         </nav>
     </aside>
+</body>
+</html>
 <script>
     const getAllBooks = new Worker("WWgetAllBooks.js");
     // récup la div où créer les cards
@@ -94,11 +98,17 @@
         const allBooks = e.data;
         allBooks.forEach(book => {
 
+            // je crée un lien (qui contient la card)
             const bookCard = document.createElement("div");
             bookCard.classList.add("bookCard");
             lastAddedBooks.appendChild(bookCard);
 
-            const bookTitle = document.createElement("h3");  
+            const bookInfoBtn = document.createElement("button");
+            bookInfoBtn.innerText = "Plus d'infos";
+            bookInfoBtn.appendChild(bookInfoBtn);
+            // quand j'appuie sur le bouton, je veux que l'id du bouquin soit envoyée en get vers la visionneuse
+
+            const bookTitle = document.createElement("h3");
             bookTitle.classList.add("bookTitle");
             bookTitle.innerText = `${book["titre"]}`;
             bookCard.appendChild(bookTitle);
@@ -122,12 +132,15 @@
             reservBtn.classList.add("reservBtn");
             reservBtn.innerText = `Réserver`;
             bookCard.appendChild(reservBtn);
+
+            reservBtn.addEventListener("click",()=>{
+                reservBtn.classList.toggle("modalOpen");
+                }
+            )
         });
     }
 
-    reservBtn.addeventlistener("click",()=>{
-        bookCard.classList.toggle("modalOpen");
-    })
+
 
 /**          
     * todo: DRY optimiser en créant fct° "bookDisplay(bkName,bkElement,info)" 
@@ -147,8 +160,5 @@
     * lastAddedBooks.appendChild(bkName);
     * } 
 */
-    
 
 </script>
-</body>
-</html>

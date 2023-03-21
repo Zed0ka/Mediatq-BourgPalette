@@ -7,14 +7,18 @@ body {
     grid-template-areas: "h1 h1 . ."
     "aside h2 h2 h2"
     "aside main main main"
-    "aside main main main"
+    "aside main main main";
+}
+
+body h2 {
+    border-bottom: 4px solid lightcoral;
+    margin-left: 0;
 }
 
 aside {
     grid-area: aside;
     border-right: 4px solid lightcoral;
     padding-right: 5px;
-    margin-right: 5px;
     height: 75vh;
     width: 9vw;
 }
@@ -50,18 +54,25 @@ main {
 #infos {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 1vw;
+    gap: 0.5vw;
+    text-align: justify;
 }
 
 #news{
     border-right: 2px solid lightcoral;
+    padding-right: 0.5vw;
+    padding-left: 0.5vw;
+    text-align: justify;
 }
 
 #contact {
     border-right: 2px solid lightcoral;
+    padding-right: 0.5vw;
+    text-align: justify;
 }
 
 #how {
+
 }
 
 .lastAddedBooks {
