@@ -8,11 +8,9 @@
     <title>Page d'accueil</title>
 </head>
 <body>
-<!--     <div id="h1div"> -->
         <h1>
             Mediathèque du Bourg Palette
         </h1>
-<!--     </div> -->
     <h2>
         Informations de votre médiathèque
     </h2>
@@ -103,11 +101,6 @@
             bookCard.classList.add("bookCard");
             lastAddedBooks.appendChild(bookCard);
 
-            const bookInfoBtn = document.createElement("button");
-            bookInfoBtn.innerText = "Plus d'infos";
-            bookInfoBtn.appendChild(bookInfoBtn);
-            // quand j'appuie sur le bouton, je veux que l'id du bouquin soit envoyée en get vers la visionneuse
-
             const bookTitle = document.createElement("h3");
             bookTitle.classList.add("bookTitle");
             bookTitle.innerText = `${book["titre"]}`;
@@ -133,10 +126,19 @@
             reservBtn.innerText = `Réserver`;
             bookCard.appendChild(reservBtn);
 
+            const bookInfoBtn = document.createElement("button");
+            bookInfoBtn.innerText = "Plus d'infos";
+            bookCard.appendChild(bookInfoBtn);
+            // quand j'appuie sur le bouton, je veux que l'id du bouquin soit envoyée en get vers la visionneuse
+
             reservBtn.addEventListener("click",()=>{
                 reservBtn.classList.toggle("modalOpen");
                 }
             )
+
+            bookInfoBtn.addEventListener("click",()=>{
+                bookInfoBtn.;
+            })
         });
     }
 

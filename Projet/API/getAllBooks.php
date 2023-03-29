@@ -52,7 +52,7 @@ $bdd = new PDO("mysql:host=localhost;dbname=mdtqbooks",$username,$password);
 $books = [];
 
 // je déclare une variable intermédiaire qui va contenir les données sql :
-$data = $bdd->query("SELECT titre_livre as titre, auteur_livre as auteur, genre_livre as genre, langue_livre as langue, id_livre as id, cover_livre as cover FROM livre");
+$data = $bdd->query("SELECT titre_livre as titre, auteur_livre as auteur, genre_livre as genre, langue_livre as langue, id_livre as id, couverture_livre as cover FROM livre");
 
 // je remplis mon tableau avec les infos de la query
 $books = $data->fetchAll();
